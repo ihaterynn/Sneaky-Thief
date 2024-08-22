@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" styleClass="root-layout" stylesheets="@RootLayout.css" xmlns="http://javafx.com/javafx/8.0.401" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sneakythief.controller.RootLayoutController">
+    <top>
+        <MenuBar styleClass="menu-bar">
+            <menus>
+                <Menu text="Menu">
+                    <items>
+                        <MenuItem fx:id="menuItem" onAction="#BackToMenu" text="Menu" />
+                    </items>
+                </Menu>
+                <Menu text="Exit">
+                    <items>
+                        <MenuItem fx:id="exitItem" onAction="#handleExit" text="Exit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
