@@ -1,0 +1,40 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+/* Custom CSS for Detective Board Table */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px; /* Adjust the radius value as needed */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #002e5d; /* Dark Blue header background */
+    -fx-background-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.table-view .column-header .label {
+    -fx-font-family: 'Silkscreen', sans-serif;
+    -fx-font-weight: 400; /* Bold weight */
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.table-view .cell {
+    -fx-font-family: 'Silkscreen', sans-serif;
+    -fx-font-weight: 400; /* Regular weight */
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.table-view .row {
+    -fx-background-color: transparent;
+}
+
+.table-view .row:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.table-view .focused {
+    -fx-background-color: transparent;
+}

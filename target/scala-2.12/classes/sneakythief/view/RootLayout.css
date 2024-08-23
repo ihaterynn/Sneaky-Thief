@@ -1,0 +1,13 @@
+.root-layout {
+    -fx-background-repeat: repeat;
+    -fx-background-size: auto;
+}
+
+.menu-bar {
+    -fx-background-color: #AB8BBF;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
