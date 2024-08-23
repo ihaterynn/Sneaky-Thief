@@ -9,22 +9,28 @@
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #002e5d; /* Dark Blue header background */
-    -fx-background-radius: 10px 10px 0 0; /* Rounded top corners */
+    -fx-background-color: #002e5d;
+    -fx-background-radius: 10px 10px 0 0;
 }
 
 .table-view .column-header .label {
     -fx-font-family: 'Silkscreen', sans-serif;
-    -fx-font-weight: 400; /* Bold weight */
+    -fx-font-weight: 400;
     -fx-font-size: 16px;
     -fx-text-fill: white;
 }
 
 .table-view .cell {
     -fx-font-family: 'Silkscreen', sans-serif;
-    -fx-font-weight: 400; /* Regular weight */
-    -fx-font-size: 14px;
-    -fx-text-fill: white;
+    -fx-font-weight: 400;
+    -fx-font-size: 20px;
+    -fx-text-fill: black !important;
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+}
+
+.table-view .cell .text {
+    -fx-fill: black !important;
 }
 
 .table-view .row {
@@ -37,4 +43,21 @@
 
 .table-view .focused {
     -fx-background-color: transparent;
+}
+
+/* Scroll bar customization */
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button,
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #002e5d;
+    -fx-background-radius: 5px; /* Adjust the radius to match the overall design */
+}
+
+
+.table-view .scroll-bar .track {
+    -fx-background-color: rgba(0, 46, 93, 0.5); /* Slightly transparent dark blue track */
 }

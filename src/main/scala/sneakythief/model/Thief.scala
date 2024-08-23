@@ -24,7 +24,7 @@ object Thief extends Character {
       val newY = random.nextDouble() * maxY
 
       val transition = new TranslateTransition {
-        duration = Duration(800) // Increased speed by reducing duration
+        duration = Duration(650) // Increased speed by reducing duration
         node = thief
         toX = newX - thief.layoutX.value
         toY = newY - thief.layoutY.value

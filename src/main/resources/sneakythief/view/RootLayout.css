@@ -9,5 +9,5 @@
 
 .menu-bar .label {
     -fx-text-fill: white;
-    -fx-font-weight: bold; /* Make the text bold */
+    -fx-font-weight: bold;
 }

@@ -24,7 +24,7 @@ class MenuController(
   // Call the initialization method when the controller is created
   initMuteButton()
 
-  // Start the game by switching to the InputName scene
+  // Start the game by switching to the InputName screen
   def StartGame(): Unit = {
     MainApp.switchScreen("InputName")
   }
@@ -45,7 +45,7 @@ class MenuController(
     muteImageView.fitWidth = 60.0
   }
 
-  // Open the Detective Board scene
+  // Open the Detective Board screen
   def OpenDetectiveboard(event: ActionEvent): Unit = {
     MainApp.switchScreen("DetectiveBoard")
   }

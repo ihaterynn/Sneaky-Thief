@@ -8,7 +8,7 @@ import sneakythief.MainApp
 class LoseEndingController {
 
   def BackToMenu(event: ActionEvent): Unit = {
-    MainApp.switchScreen("Menu") // Consistent casing
+    MainApp.switchScreen("Menu")
   }
 
   def PlayAgain(event: ActionEvent): Unit = {

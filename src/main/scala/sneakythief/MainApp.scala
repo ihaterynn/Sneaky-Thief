@@ -1,5 +1,6 @@
 package sneakythief
 
+import scalafx.scene.image.Image
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.scene.Scene
@@ -8,6 +9,9 @@ import scalafx.scene.media.{Media, MediaPlayer}
 import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 import javafx.scene.layout.{AnchorPane => JFXAnchorPane, BorderPane => JFXBorderPane}
 import sneakythief.util.Database
+
+import scalafx.scene.image.Image
+import scalafx.collections.ObservableBuffer
 
 object MainApp extends JFXApp {
 
@@ -66,6 +70,7 @@ object MainApp extends JFXApp {
   // Initialize the primary stage
   stage = new PrimaryStage {
     title = "Sneaky Thief"
+    icons.add(new Image(getClass.getResourceAsStream("/Graphics/GameIcon.png"))) // Set the game icon
     scene = new Scene(loadRootLayout()) // Initially load the root layout
   }
 
