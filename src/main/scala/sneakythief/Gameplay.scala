@@ -181,42 +181,36 @@ object Gameplay {
   }
 
   private def handleWin(): Unit = {
-    timer.stop() // Stop the timer when the player wins
-
-    // Calculate the time taken by subtracting the remaining time from the initial time
+    timer.stop()
     val timeTaken = 15 - timeLeft
-
-    // Store the player's time and name in the leaderboard
     val playerName = MainApp.getPlayerName
-    val timeScore = timeTaken // Use the time taken as the timeScore
+    val timeScore = timeTaken
     try {
-      DetectiveBoard.addEntry(playerName, timeScore) // Save entry to the database
+      DetectiveBoard.addEntry(playerName, timeScore)
       println(s"Record added on win: Player: $playerName, Time Taken: $timeScore seconds")
+      // The displayAllEntries method will be called automatically after adding the entry
     } catch {
       case e: Exception =>
         println(s"Error adding record on win: ${e.getMessage}")
+        e.printStackTrace() // Print the full stack trace for debugging
     }
-
     MainApp.switchScreen("WinEnding")
   }
 
   private def handleLoss(): Unit = {
-    timer.stop() // Stop the timer
-
-    // Calculate the time taken by subtracting the remaining time from the initial time
+    timer.stop()
     val timeTaken = 15 - timeLeft
-
-    // Store the player's time and name in the leaderboard
     val playerName = MainApp.getPlayerName
-    val timeScore = timeTaken // Use the time taken as the timeScore
+    val timeScore = timeTaken
     try {
-      DetectiveBoard.addEntry(playerName, timeScore) // Save entry to the database
+      DetectiveBoard.addEntry(playerName, timeScore)
       println(s"Record added on loss: Player: $playerName, Time: $timeScore seconds")
     } catch {
       case e: Exception =>
         println(s"Error adding record on loss: ${e.getMessage}")
+        e.printStackTrace() // Print the full stack trace for debugging
     }
-    MainApp.switchScreen("LoseEnding") // Switch to the LoseEnding screen
+    MainApp.switchScreen("LoseEnding")
   }
 
   // Reset the game state

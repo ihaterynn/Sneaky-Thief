@@ -26,13 +26,27 @@ class DetectiveBoardController(
                                 private val timeColumn: TableColumn[(String, Int), Int],
                               ) extends TableController[(String, Int)] {
 
+
+  initialize()
+
   def initialize(): Unit = {
     try {
       // Bind the columns using the trait method
       bindColumn(detectiveNameColumn, (entry: (String, Int)) => entry._1)
       bindColumn(timeColumn, (entry: (String, Int)) => entry._2)
 
-      // Retrieve and display entries
+      // Set up a method to refresh the table data
+      refreshTableData()
+    } catch {
+      case ex: Exception =>
+        println(s"Error initializing DetectiveBoardController: ${ex.getMessage}")
+        ex.printStackTrace()
+    }
+  }
+
+  // Add this method to refresh the table data
+  def refreshTableData(): Unit = {
+    try {
       val entries = DetectiveBoard.getEntries
       if (entries.isEmpty) {
         println("No entries found in the leaderboard.")
@@ -43,27 +57,25 @@ class DetectiveBoardController(
       val leaderboardData = ObservableBuffer(entries: _*)
       println(s"Setting TableView items: ${leaderboardData.mkString(", ")}")
       detectiveboardTable.items = leaderboardData
-      detectiveboardTable.refresh() // Ensure the UI is refreshed
+      detectiveboardTable.refresh()
     } catch {
       case ex: Exception =>
-        new Alert(AlertType.Error) {
-          initOwner(MainApp.stage)
-          title = "Error"
-          headerText = "An error occurred"
-          contentText = s"Could not load leaderboard data: ${ex.getMessage}"
-        }.showAndWait()
+        println(s"Error refreshing table data: ${ex.getMessage}")
+        ex.printStackTrace()
     }
   }
 
+  // Modify the BackToMenu method to refresh the data before switching screens
   def BackToMenu(event: MouseEvent): Unit = {
+    refreshTableData()
     MainApp.switchScreen("Menu")
   }
 
+  // Modify the handleClear method to refresh the data after clearing
   def handleClear(event: MouseEvent): Unit = {
     try {
       DetectiveBoard.clearEntries()
-      detectiveboardTable.items = ObservableBuffer.empty
-      detectiveboardTable.refresh() // Refresh the UI after clearing
+      refreshTableData()
     } catch {
       case ex: Exception =>
         new Alert(AlertType.Error) {

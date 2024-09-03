@@ -29,9 +29,13 @@ object DetectiveBoard {
         println(s"Adding entry: Player: $playerName, Time: $timeScore")
         sql"INSERT INTO DetectiveBoard (playerName, timeScore) VALUES ($playerName, $timeScore)".update.apply()
         println("Entry added successfully.")
+
+        // Remove the immediate display of entries here
+        // displayAllEntries()
       } catch {
         case e: Exception =>
           println(s"Error adding entry to DetectiveBoard: ${e.getMessage}")
+          e.printStackTrace()
       }
     }
   }
@@ -42,11 +46,12 @@ object DetectiveBoard {
         val result = sql"SELECT playerName, timeScore FROM DetectiveBoard ORDER BY timeScore ASC"
           .map(rs => (rs.string("playerName"), rs.int("timeScore"))).list.apply()
 
-        println(s"Entries retrieved: ${result.mkString(", ")}") // Add this line
+        println(s"Entries retrieved: ${result.mkString(", ")}")
         result
       } catch {
         case e: Exception =>
           println(s"Error retrieving entries from DetectiveBoard: ${e.getMessage}")
+          e.printStackTrace() // Print the full stack trace for debugging
           List.empty
       }
     }
