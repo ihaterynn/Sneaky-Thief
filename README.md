@@ -34,9 +34,9 @@ After each game, the names of players and the time they took to defeat the thief
 
 ## 🛠️ Technologies Used
 
-- **Scala**: The primary programming language used to develop the game.
-- **ScalaFX**: A Scala wrapper for JavaFX, used to create the user interface.
-- **Java 8**: Required for running ScalaFX and for its compatibility with the libraries used in the game.
+- **Scala**
+- **ScalaFX**
+- **Java 8**
 
 ## 🚀 How to Run the Game
 
