@@ -19,8 +19,6 @@ Before the action starts, players are introduced to the game through a short, an
 
 ![Story Scene](screenshots/Story.gif)
 
-### Storyline:
-The story follows a master thief who has been causing havoc in the city. As a skilled detective, your mission is to stop this thief before he escapes with his loot. Pay attention to the controls displayed during the story scene to help you succeed in your mission.
 
 ## 🕵️‍♂️ Detective Board
 
@@ -31,6 +29,8 @@ After each game, the names of players and the time they took to defeat the thief
 ### Detective Board Features:
 - **Player Names:** The names of players who successfully captured the thief are stored.
 - **Time Taken:** The time taken to defeat the thief is recorded and displayed, allowing players to see how they rank against others.
+- **Reset Button:** Deletes/Clears all records on the database.
+- **Home Button:** Returns player back to menu screen.
 
 ## 🛠️ Technologies Used
 
