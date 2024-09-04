@@ -17,7 +17,7 @@ In this game, players take on the role of a sharpshooter with the mission to sho
 
 Before the action starts, players are introduced to the game through a short, animated dialog scene that sets the stage for the game. This scene not only introduces the storyline but also provides instructions on how to control the gameplay.
 
-![Story Scene](screenshots/Story.gif)
+![Story Scene](screenshots/Story GiF.gif)
 
 ### Storyline:
 The story follows a master thief who has been causing havoc in the city. As a skilled detective, your mission is to stop this thief before he escapes with his loot. Pay attention to the controls displayed during the story scene to help you succeed in your mission.
@@ -26,7 +26,7 @@ The story follows a master thief who has been causing havoc in the city. As a sk
 
 After each game, the names of players and the time they took to defeat the thief are stored in a database. This information is then displayed on the Detective Board screen, showcasing the top detectives who have successfully captured the thief.
 
-![Detective Board](screenshots/detectiveboard.png)
+![Detective Board](screenshots/Detective board.png)
 
 ### Detective Board Features:
 - **Player Names:** The names of players who successfully captured the thief are stored.
