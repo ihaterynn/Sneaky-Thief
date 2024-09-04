@@ -1,6 +1,6 @@
 # Sneaky Thief Game
 
-Welcome to **Sneaky Thief Game**, a Scala-based game designed using basic Object-Oriented Programming (OOP) principles. The game leverages the **ScalaFX** and **Java 8** libraries to create an engaging and interactive experience.
+Welcome to **Sneaky Thief**, a Scala-based game designed using basic Object-Oriented Programming (OOP) principles. The game leverages the **ScalaFX** and **Java 8** libraries to create an engaging and interactive experience.
 
 ## 🕹️ Gameplay
 
